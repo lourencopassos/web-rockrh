@@ -99,7 +99,7 @@ export default function SignUp() {
             </Grid>
             <Grid item xs={12}>
               <TextField
-                error
+                error={false}
                 helperText="Email incorreto"
                 variant="outlined"
                 required
