@@ -61,51 +61,82 @@ export default function SignUp() {
         </Typography>
         <form className={classes.form} noValidate>
           <Grid container spacing={2}>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12}>
               <TextField
-                autoComplete="fname"
-                name="firstName"
+                autoComplete="name"
+                name="name"
                 variant="outlined"
                 required
                 fullWidth
                 id="firstName"
-                label="First Name"
+                label="Nome Completo"
                 autoFocus
               />
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
+                autoComplete="phone"
+                name="phone"
                 variant="outlined"
                 required
                 fullWidth
-                id="lastName"
-                label="Last Name"
-                name="lastName"
-                autoComplete="lname"
+                id="phone"
+                label="Telefone Celular"
+                autoFocus
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                autoComplete="cpf"
+                name="cpf"
+                variant="outlined"
+                required
+                fullWidth
+                id="cpf"
+                label="CPF"
+                autoFocus
               />
             </Grid>
             <Grid item xs={12}>
               <TextField
+                error
+                helperText="Email incorreto"
                 variant="outlined"
                 required
                 fullWidth
                 id="email"
-                label="Email Address"
+                label="Endereço de Email"
                 name="email"
                 autoComplete="email"
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} sm={6}>
               <TextField
                 variant="outlined"
                 required
                 fullWidth
                 name="password"
-                label="Password"
+                label="Senha"
                 type="password"
                 id="password"
                 autoComplete="current-password"
               />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                name="password"
+                label="Repita sua senha"
+                type="password"
+                id="password-repeat"
+                autoComplete="current-password"
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <p>Foto</p>
+              <input type="file" />
             </Grid>
             <Grid item xs={12}>
               <FormControlLabel
