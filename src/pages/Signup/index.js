@@ -87,6 +87,7 @@ export default function SignUp() {
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
+                error={false}
                 autoComplete="cpf"
                 name="cpf"
                 variant="outlined"
