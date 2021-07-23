@@ -12,6 +12,9 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
+import MenuItem from "@material-ui/core/MenuItem";
+import Select from "@material-ui/core/Select";
+import InputLabel from "@material-ui/core/InputLabel";
 
 function Copyright() {
   return (
@@ -43,6 +46,9 @@ const useStyles = makeStyles((theme) => ({
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
+  },
+  selectEmpty: {
+    marginTop: theme.spacing(3),
   },
 }));
 
@@ -99,9 +105,21 @@ export default function SignUp() {
               />
             </Grid>
             <Grid item xs={12}>
+              <InputLabel id="demo-simple-select-label">
+                Selecione a empresa onde você trabalha
+              </InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+              >
+                <MenuItem value={10}>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</MenuItem>
+                <MenuItem value={20}>Twenty</MenuItem>
+                <MenuItem value={30}>Thirty</MenuItem>
+              </Select>
+            </Grid>
+            <Grid item xs={12}>
               <TextField
                 error={false}
-                helperText="Email incorreto"
                 variant="outlined"
                 required
                 fullWidth
