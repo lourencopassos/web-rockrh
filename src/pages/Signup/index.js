@@ -12,6 +12,9 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
+import MenuItem from "@material-ui/core/MenuItem";
+import Select from "@material-ui/core/Select";
+import InputLabel from "@material-ui/core/InputLabel";
 
 function Copyright() {
   return (
@@ -44,6 +47,9 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
+  selectEmpty: {
+    marginTop: theme.spacing(3),
+  },
 }));
 
 export default function SignUp() {
@@ -57,55 +63,99 @@ export default function SignUp() {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign up
+          Cadastro
         </Typography>
         <form className={classes.form} noValidate>
           <Grid container spacing={2}>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12}>
               <TextField
-                autoComplete="fname"
-                name="firstName"
+                autoComplete="name"
+                name="name"
                 variant="outlined"
                 required
                 fullWidth
                 id="firstName"
-                label="First Name"
+                label="Nome Completo"
                 autoFocus
               />
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
+                autoComplete="phone"
+                name="phone"
                 variant="outlined"
                 required
                 fullWidth
-                id="lastName"
-                label="Last Name"
-                name="lastName"
-                autoComplete="lname"
+                id="phone"
+                label="Telefone Celular"
+                autoFocus
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                error={false}
+                autoComplete="cpf"
+                name="cpf"
+                variant="outlined"
+                required
+                fullWidth
+                id="cpf"
+                label="CPF"
+                autoFocus
               />
             </Grid>
             <Grid item xs={12}>
+              <InputLabel id="demo-simple-select-label">
+                Selecione a empresa onde você trabalha
+              </InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+              >
+                <MenuItem value={10}>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</MenuItem>
+                <MenuItem value={20}>Twenty</MenuItem>
+                <MenuItem value={30}>Thirty</MenuItem>
+              </Select>
+            </Grid>
+            <Grid item xs={12}>
               <TextField
+                error={false}
                 variant="outlined"
                 required
                 fullWidth
                 id="email"
-                label="Email Address"
+                label="Endereço de Email"
                 name="email"
                 autoComplete="email"
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} sm={6}>
               <TextField
                 variant="outlined"
                 required
                 fullWidth
                 name="password"
-                label="Password"
+                label="Senha"
                 type="password"
                 id="password"
                 autoComplete="current-password"
               />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                name="password"
+                label="Repita sua senha"
+                type="password"
+                id="password-repeat"
+                autoComplete="current-password"
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <p>Foto</p>
+              <input type="file" />
             </Grid>
             <Grid item xs={12}>
               <FormControlLabel
