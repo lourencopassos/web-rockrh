@@ -50,6 +50,9 @@ const useStyles = makeStyles((theme) => ({
   selectEmpty: {
     marginTop: theme.spacing(3),
   },
+  select: {
+    width: "100%",
+  },
 }));
 
 export default function SignUp() {
@@ -105,16 +108,11 @@ export default function SignUp() {
               />
             </Grid>
             <Grid item xs={12}>
-              <InputLabel id="demo-simple-select-label">
-                Selecione a empresa onde você trabalha
-              </InputLabel>
-              <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-              >
-                <MenuItem value={10}>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem>
+              <InputLabel>Selecione a empresa onde você trabalha</InputLabel>
+              <Select className={classes.select}>
+                <MenuItem value="" />
+                <MenuItem value={10}>Pollo Automotiva</MenuItem>
+                <MenuItem value={20}>Doce Lar</MenuItem>
               </Select>
             </Grid>
             <Grid item xs={12}>
@@ -154,13 +152,13 @@ export default function SignUp() {
               />
             </Grid>
             <Grid item xs={12}>
-              <p>Foto</p>
-              <input type="file" />
+              <InputLabel>Foto</InputLabel>
+              <TextField type="file" style={{ border: "none" }} />
             </Grid>
             <Grid item xs={12}>
               <FormControlLabel
                 control={<Checkbox value="allowExtraEmails" color="primary" />}
-                label="I want to receive inspiration, marketing promotions and updates via email."
+                label="Aceito receber comunicação via WhatsApp"
               />
             </Grid>
           </Grid>
@@ -171,12 +169,12 @@ export default function SignUp() {
             color="primary"
             className={classes.submit}
           >
-            Sign Up
+            Cadastrar
           </Button>
           <Grid container justifyContent="flex-end">
             <Grid item>
               <Link href="#" variant="body2">
-                Already have an account? Sign in
+                Já tem uma conta? Acesse aqui
               </Link>
             </Grid>
           </Grid>
