@@ -12,6 +12,7 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
+import { useHistory } from "react-router-dom";
 
 function Copyright() {
   return (
@@ -38,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.secondary.main,
   },
   form: {
-    width: "100%", // Fix IE 11 issue.
+    width: "100%",
     marginTop: theme.spacing(1),
   },
   submit: {
@@ -48,6 +49,11 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignIn() {
   const classes = useStyles();
+  const history = useHistory();
+
+  const goToSignup = () => {
+    history.push("/cadastro");
+  };
 
   return (
     <Container component="main" maxWidth="xs">
@@ -57,7 +63,7 @@ export default function SignIn() {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign in
+          Entrar na plataforma
         </Typography>
         <form className={classes.form} noValidate>
           <TextField
@@ -65,10 +71,10 @@ export default function SignIn() {
             margin="normal"
             required
             fullWidth
-            id="email"
-            label="Email Address"
-            name="email"
-            autoComplete="email"
+            id="cpf"
+            label="CPF"
+            name="cpf"
+            autoComplete="cpf"
             autoFocus
           />
           <TextField
@@ -77,14 +83,14 @@ export default function SignIn() {
             required
             fullWidth
             name="password"
-            label="Password"
+            label="Senha"
             type="password"
             id="password"
             autoComplete="current-password"
           />
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
+            label="Lembrar-me"
           />
           <Button
             type="submit"
@@ -93,17 +99,17 @@ export default function SignIn() {
             color="primary"
             className={classes.submit}
           >
-            Sign In
+            Entrar
           </Button>
           <Grid container>
             <Grid item xs>
               <Link href="#" variant="body2">
-                Forgot password?
+                Esqueceu sua senha?
               </Link>
             </Grid>
             <Grid item>
-              <Link href="#" variant="body2">
-                {"Don't have an account? Sign Up"}
+              <Link href="/cadastro" variant="body2">
+                {"Primeiro acesso"}
               </Link>
             </Grid>
           </Grid>
