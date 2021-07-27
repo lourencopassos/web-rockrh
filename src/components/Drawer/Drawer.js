@@ -1,6 +1,6 @@
 import React from "react";
 import Drawer from "@material-ui/core/Drawer";
-import { mainListItems, secondaryListItems } from "../MenuItems/MenuItems";
+import { mainListItems } from "../MenuItems/MenuItems";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
@@ -58,8 +58,6 @@ export default function DrawerMenu({ open, handleDrawerClose }) {
       </div>
       <Divider />
       <List>{mainListItems}</List>
-      <Divider />
-      <List>{secondaryListItems}</List>
     </Drawer>
   );
 }
