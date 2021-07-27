@@ -7,6 +7,8 @@ import Paper from "@material-ui/core/Paper";
 import Welcome from "../../components/Welcome/Welcome";
 import MonthSale from "../../components/MonthSale/MonthSale";
 import MonthGoals from "../../components/MonthGoals/MonthGoals";
+import LastFeedbacks from "../../components/LastFeedbacks/LastFeedbacks";
+import Evaluations from "../../components/Evaluations/Evaluations";
 
 export default function EmployeeDashboard() {
   const useStyles = makeStyles((theme) => ({
@@ -30,12 +32,22 @@ export default function EmployeeDashboard() {
       <Grid container spacing={3}>
         <Grid item xs={12} md={8} lg={9}>
           <Paper className={fixedHeightPaper}>
-            <MonthGoals/>
+            <MonthGoals />
           </Paper>
         </Grid>
         <Grid item xs={12} md={4} lg={3}>
           <Paper className={fixedHeightPaper}>
             <MonthSale />
+          </Paper>
+        </Grid>
+        <Grid item xs={12} md={8} lg={6}>
+          <Paper className={classes.paper}>
+            <LastFeedbacks />
+          </Paper>
+        </Grid>
+        <Grid item xs={12} md={8} lg={6}>
+          <Paper className={classes.paper}>
+            <Evaluations />
           </Paper>
         </Grid>
       </Grid>

@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
 import { monthPicker } from "../../utils/month-picker";
+import Title from "../DashboardCardTitle/Title";
 
 const useStyles = makeStyles({
   depositContext: {
@@ -18,9 +19,7 @@ export default function MonthSale() {
   const classes = useStyles();
   return (
     <>
-      <Typography component="h2" variant="h6" color="primary" gutterBottom>
-        Venda Mensal
-      </Typography>
+      <Title>Venda Mensal</Title>
       <Typography component="p" variant="h4">
         R$ 3.124,20
       </Typography>

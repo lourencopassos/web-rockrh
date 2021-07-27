@@ -1,12 +1,11 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
 import DoneIcon from "@material-ui/icons/Done";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
+import Title from "../DashboardCardTitle/Title";
 
 export default function MonthGoals() {
   const useStyles = makeStyles((theme) => ({
@@ -37,9 +36,9 @@ export default function MonthGoals() {
 
   return (
     <>
-      <Typography component="h2" variant="h6" color="primary" gutterBottom>
+      <Title>
         Objetivos do Mês
-      </Typography>
+      </Title>
       <div>
         <List>
           {mockGoals.map(({ goal, status }) => {
