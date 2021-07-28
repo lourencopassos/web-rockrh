@@ -1,9 +1,10 @@
 import React from 'react'
+import PortalLayout from "../../layouts/portal.index";
 
 export default function EvaluationDetail() {
   return (
-    <div>
-      
-    </div>
-  )
+    <PortalLayout title="Evaluation">
+      <p> oi </p>
+    </PortalLayout>
+  );
 }
