@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react";
+import PortalLayout from "../../layouts/portal.index";
 
 export default function FeedbackDetail() {
   return (
-    <div>
-      
-    </div>
-  )
+    <PortalLayout title="Feedback">
+      <p> oi </p>
+    </PortalLayout>
+  );
 }
