@@ -45,6 +45,7 @@ export default function PortalLayout({ title, children }) {
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
+          <h1>{title}</h1>
           {children}
         </Container>
       </main>
