@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import EmployeeDashboard from "../pages/EmployeeMain";
 import LoginEmployee from "../pages/LoginEmployee";
 import LoginManager from "../pages/LoginManager";
+import EvaluationDetail from "../pages/EvaluationDetail/EvaluationDetail";
 
 import SignUp from "../pages/Signup";
 
@@ -11,8 +12,18 @@ export default function Routes() {
     <BrowserRouter>
       <Switch>
         <Route component={LoginEmployee} exact path="/funcionario/login" />
-        <Route component={EmployeeDashboard} exact path="/funcionario/dashboard" />
+        <Route
+          component={EmployeeDashboard}
+          exact
+          path="/funcionario/dashboard"
+        />
+        <Route
+          component={EmployeeDashboard}
+          exact
+          path="/funcionario/dashboard"
+        />
         <Route component={LoginManager} exact path="/gerente/login" />
+        <Route component={EvaluationDetail} exact path="/avaliacao/:id" />
         <Route component={SignUp} exact path="/cadastro" />
       </Switch>
     </BrowserRouter>
