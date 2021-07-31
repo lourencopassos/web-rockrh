@@ -1,8 +1,11 @@
 import Routes from './routes';
+import ThemeConfig from "./theme";
 
 function App() {
   return (
-    <Routes />
+    <ThemeConfig>
+      <Routes />
+    </ThemeConfig>
   );
 }
 
