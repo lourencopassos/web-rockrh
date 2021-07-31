@@ -9,6 +9,10 @@ const useStyles = makeStyles({
   depositContext: {
     flex: 1,
   },
+  salesGoal: {
+    color: "#228B22",
+    fontWeight: 700,
+  },
 });
 
 const today = new Date();
@@ -26,6 +30,15 @@ export default function MonthSale() {
       <Typography color="textSecondary" className={classes.depositContext}>
         em {`${currentMonth} de ${currentYear}`}
       </Typography>
+      <div>
+        <Typography
+          color="textSecondary"
+          component="p"
+          className={classes.salesGoal}
+        >
+          103% da meta
+        </Typography>
+      </div>
       <div>
         <Link color="primary" href="#">
           Ver mais informações
