@@ -17,7 +17,7 @@ const GREY = {
   600: '#637381',
   700: '#454F5B',
   800: '#212B36',
-  900: '#161C24',
+  900: '#606060',
   500_8: alpha('#919EAB', 0.08),
   500_12: alpha('#919EAB', 0.12),
   500_16: alpha('#919EAB', 0.16),
@@ -96,7 +96,7 @@ const palette = {
   grey: GREY,
   gradients: GRADIENTS,
   divider: GREY[500_24],
-  text: { primary: GREY[800], secondary: GREY[600], disabled: GREY[500] },
+  text: { primary: GREY[800], secondary: GREY[900], disabled: GREY[500] },
   background: { paper: '#fff', default: '#fff', neutral: GREY[200] },
   action: {
     active: GREY[600],
