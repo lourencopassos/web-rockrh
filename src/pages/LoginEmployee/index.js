@@ -84,7 +84,7 @@ export default function SignIn() {
           />
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
-            label="Lembrar-me"
+            label="Lembrar meu login"
           />
           <Button
             type="submit"
