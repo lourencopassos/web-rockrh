@@ -30,6 +30,9 @@ export default function PortalLayout({ title, children }) {
       paddingTop: theme.spacing(4),
       paddingBottom: theme.spacing(4),
     },
+    title: {
+      paddingBottom: theme.spacing(3),
+    },
   }));
 
   const classes = useStyles();
@@ -45,7 +48,7 @@ export default function PortalLayout({ title, children }) {
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
-          <h1>{title}</h1>
+          <h1 className={classes.title}>{title}</h1>
           {children}
         </Container>
       </main>

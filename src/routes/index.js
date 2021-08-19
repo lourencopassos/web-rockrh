@@ -8,6 +8,7 @@ import FeedbackDetail from "../pages/FeedbackDetail/FeedbackDetail";
 
 import SignUp from "../pages/Signup";
 import FeedbackList from "../pages/FeedbackList/FeedbackList";
+import CreateFeedback from "../pages/CreateFeedback/CreateFeedback";
 
 export default function Routes() {
   return (
@@ -25,6 +26,7 @@ export default function Routes() {
           path="/funcionario/dashboard"
         />
         <Route component={LoginManager} exact path="/gerente/login" />
+        <Route component={CreateFeedback} exact path="/feedback/criar" />
         <Route component={EvaluationDetail} exact path="/avaliacao/:id" />
         <Route component={FeedbackDetail} exact path="/feedback/:id" />
         <Route component={FeedbackList} exact path="/feedbacks" />
