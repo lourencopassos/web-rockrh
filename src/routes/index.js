@@ -26,7 +26,7 @@ export default function Routes() {
           path="/funcionario/dashboard"
         />
         <Route component={LoginManager} exact path="/gerente/login" />
-        <Route component={CreateFeedback} exact path="/feedback/criar" />
+        <Route component={CreateFeedback} exact path="/feedback/novo" />
         <Route component={EvaluationDetail} exact path="/avaliacao/:id" />
         <Route component={FeedbackDetail} exact path="/feedback/:id" />
         <Route component={FeedbackList} exact path="/feedbacks" />
