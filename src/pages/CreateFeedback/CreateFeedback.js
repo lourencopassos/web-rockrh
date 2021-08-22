@@ -1,4 +1,4 @@
-import { Grid, TextField } from "@material-ui/core";
+import { Grid, TextField, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 import PortalLayout from "../../layouts/portal.index";
@@ -7,9 +7,6 @@ export default function CreateFeedback() {
   const useStyles = makeStyles((theme) => ({
     title: {
       width: "100%",
-    },
-    description: {
-      height: 600,
     },
   }));
 
@@ -38,8 +35,17 @@ export default function CreateFeedback() {
             multiline={true}
             rows={10}
             label="Descrição"
-            className={classes.description}
           />
+        </Grid>
+        <Grid item xs={12}>
+          <Button variant="contained" color="primary" size="large">
+            Criar Feedback
+          </Button>
+          <TextField variant="outlined"
+            name="title"
+            required
+            id="firstName"
+            label="Feedback direcionado para quem"/> 
         </Grid>
       </Grid>
     </PortalLayout>
